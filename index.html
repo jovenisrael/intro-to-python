@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Python for Absolute Beginners</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        color: #1f1f1f;
+        background: #f8f9fb;
+      }
+      header,
+      main {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+      header {
+        padding-top: 32px;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #0f2a52;
+        margin-top: 24px;
+      }
+      h1 {
+        margin-bottom: 8px;
+      }
+      section {
+        background: #ffffff;
+        border-radius: 10px;
+        padding: 20px 24px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      }
+      .subtitle {
+        color: #4a4a4a;
+        margin-top: 0;
+      }
+      .concept {
+        margin-bottom: 12px;
+      }
+      .note {
+        background: #eef4ff;
+        border-left: 4px solid #3d6dcc;
+        padding: 12px 16px;
+        border-radius: 6px;
+      }
+      pre {
+        background: #0f172a;
+        color: #f8fafc;
+        padding: 14px 16px;
+        border-radius: 8px;
+        overflow-x: auto;
+      }
+      code {
+        font-family: "Courier New", Courier, monospace;
+      }
+      ul {
+        padding-left: 18px;
+      }
+      .practice {
+        background: #f3faf5;
+        border-left: 4px solid #2f855a;
+        padding: 12px 16px;
+        border-radius: 6px;
+      }
+      footer {
+        text-align: center;
+        color: #5c5c5c;
+        padding: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Introduction to Python</h1>
+      <p class="subtitle">
+        A friendly, step-by-step guide for students with no programming
+        background.
+      </p>
+    </header>
+    <main>
+      <section>
+        <h2>1. Introduction to Python</h2>
+        <div class="concept">
+          <h3>What Python is</h3>
+          <p>
+            Python is a programming language. A programming language is a way to
+            give instructions to a computer using words and symbols that humans
+            can read.
+          </p>
+          <p>
+            Think of Python as a friendly translator between you and the
+            computer. You describe what you want, and Python turns it into
+            steps the computer can follow.
+          </p>
+          <pre><code>print("Hello, world!")</code></pre>
+          <p>
+            This one line tells Python to show a message on the screen.
+          </p>
+        </div>
+        <div class="concept">
+          <h3>Where Python is used in real life</h3>
+          <p>
+            Python is used for websites, data analysis, automation (like sorting
+            files), games, and even controlling robots.
+          </p>
+          <ul>
+            <li>Companies use Python to analyze sales and customer data.</li>
+            <li>Students use Python to build simple games or calculators.</li>
+            <li>Offices use Python to automate repetitive tasks.</li>
+          </ul>
+        </div>
+        <div class="concept">
+          <h3>Why Python is beginner-friendly</h3>
+          <p>
+            Python looks close to everyday English. It does not require lots of
+            extra symbols, so beginners can focus on ideas instead of confusing
+            punctuation.
+          </p>
+          <p>
+            You can also test code quickly, make changes, and see results right
+            away. This helps you learn by trying small examples.
+          </p>
+        </div>
+        <div class="concept">
+          <h3>How Python code is read (top to bottom)</h3>
+          <p>
+            Python runs your instructions from top to bottom, line by line. The
+            order matters, just like following steps in a recipe.
+          </p>
+          <pre><code>print("Step 1")
+print("Step 2")
+print("Step 3")</code></pre>
+          <p>
+            If you move lines around, the output will change. Always write code
+            in the order you want it to run.
+          </p>
+        </div>
+        <div class="concept">
+          <h3>Comments (notes for humans)</h3>
+          <p>
+            Comments are notes you write for yourself. Python ignores them, but
+            they help you remember what your code does.
+          </p>
+          <pre><code># This is a comment
+print("Python ignores the comment")</code></pre>
+        </div>
+        <div class="practice">
+          <h3>Practice Tasks</h3>
+          <ul>
+            <li>Write one sentence explaining what Python is.</li>
+            <li>List two real-life places where Python could be used.</li>
+            <li>
+              Explain why the order of code lines matters in Python.
+            </li>
+          </ul>
+          <p><strong>Expected Output:</strong> Clear sentences in your own words.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>2. Variables &amp; Data Types</h2>
+        <div class="concept">
+          <h3>What a variable is (real-world analogy)</h3>
+          <p>
+            A variable is like a labeled box. The label is the variable name,
+            and the box holds a value. You can look inside the box or replace
+            what is inside.
+          </p>
+          <p>
+            For example, a box labeled <code>age</code> can hold the number 20.
+            Later, you can replace it with 21 when the birthday comes.
+          </p>
+        </div>
+        <div class="concept">
+          <h3>How assignment works</h3>
+          <p>
+            Assignment means putting a value into a variable using the equals
+            sign <code>=</code>. This does not mean “equal”; it means “store.”
+          </p>
+          <pre><code>score = 10
+score = 15
+print(score)</code></pre>
+          <p>
+            The final value is 15 because the second assignment replaces the
+            first one.
+          </p>
+          <pre><code>points = 3
+points = points + 2
+print(points)</code></pre>
+          <p>
+            You can also build new values from old ones.
+          </p>
+        </div>
+        <div class="concept">
+          <h3>Variable naming rules</h3>
+          <ul>
+            <li>Use letters, numbers, and underscores.</li>
+            <li>Start with a letter (not a number).</li>
+            <li>Use descriptive names like <code>total_price</code>.</li>
+          </ul>
+        </div>
+        <div class="concept">
+          <h3>Data types</h3>
+          <ul>
+            <li><strong>int</strong>: whole numbers like 1, 2, 10</li>
+            <li><strong>float</strong>: numbers with decimals like 3.5, 99.5</li>
+            <li><strong>str</strong>: text in quotes, like "Hello"</li>
+            <li><strong>bool</strong>: true/false values, <code>True</code> or <code>False</code></li>
+          </ul>
+          <p>
+            Data types matter because Python needs to know how to handle each
+            value. You can add numbers, but you cannot add text and numbers
+            without converting them first.
+          </p>
+        </div>
+        <div class="concept">
+          <h3>Simple examples</h3>
+          <pre><code>age = 20
+price = 99.5
+name = "Alex"
+is_student = True</code></pre>
+          <pre><code>print(age + 5)
+print(name + " Smith")
+print(is_student)</code></pre>
+        </div>
+        <div class="concept">
+          <h3>Strings (text) in more detail</h3>
+          <p>
+            Strings are text in quotes. You can combine them and check their
+            length.
+          </p>
+          <pre><code>message = "Hello"
+print(message + "!")
+print(len(message))</code></pre>
+          <p>Useful beginner string methods:</p>
+          <ul>
+            <li><code>upper()</code>: make text uppercase</li>
+            <li><code>lower()</code>: make text lowercase</li>
+            <li><code>replace()</code>: swap part of the text</li>
+          </ul>
+          <pre><code>word = "Python"
+print(word.upper())
+print(word.lower())
+print(word.replace("Py", "My"))</code></pre>
+        </div>
+        <div class="concept">
+          <h3>Booleans (True/False)</h3>
+          <p>
+            Booleans are used for decisions. Comparisons create boolean values.
+          </p>
+          <pre><code>is_tall = True
+is_short = False
+print(5 &gt; 3)
+print(2 == 10)</code></pre>
+        </div>
+        <div class="concept">
+          <h3>Built-in functions</h3>
+          <p>
+            <code>print()</code> shows a value on the screen so you can see it.
+          </p>
+          <p>
+            <code>type()</code> tells you the data type of a value.
+          </p>
+          <pre><code>print(name)
+print(type(price))</code></pre>
+          <pre><code>print(type("Hello"))
+print(type(100))
+print(type(3.14))
+print(type(False))</code></pre>
+          <p>
+            More useful beginner functions:
+          </p>
+          <ul>
+            <li><code>len()</code>: how many items are in a list or how many characters in text</li>
+            <li><code>int()</code> and <code>float()</code>: convert to numbers</li>
+            <li><code>str()</code>: convert a value to text</li>
+          </ul>
+          <pre><code>print(len("Python"))
+print(str(42))
+print(int("7") + 3)</code></pre>
+        </div>
+        <div class="practice">
+          <h3>Practice Tasks</h3>
+          <ul>
+            <li>Create a variable for your favorite food.</li>
+            <li>Create a variable for your age.</li>
+            <li>Print both variables.</li>
+            <li>Use <code>type()</code> to check the data type of each.</li>
+          </ul>
+          <p>
+            <strong>Expected Output:</strong> The values you stored and their
+            data types printed on the screen.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>3. Input &amp; Output</h2>
+        <div class="concept">
+          <h3>Getting input</h3>
+          <p>
+            <code>input()</code> lets the user type something. Python stores it
+            as text (a string).
+          </p>
+          <pre><code>city = input("Enter your city: ")
+print("You live in", city)</code></pre>
+          <p>
+            The message inside <code>input()</code> is called a prompt. It helps
+            the user know what to type.
+          </p>
+        </div>
+        <div class="concept">
+          <h3>Converting input</h3>
+          <p>
+            If you need a number, convert the input using <code>int()</code> or
+            <code>float()</code>.
+          </p>
+          <pre><code>age = int(input("Enter your age: "))
+print(age)</code></pre>
+          <pre><code>price = float(input("Enter a price: "))
+total = price + 5.0
+print(total)</code></pre>
+          <pre><code>first = input("First name: ")
+last = input("Last name: ")
+full_name = first + " " + last
+print(full_name)</code></pre>
+        </div>
+        <div class="note">
+          <p>
+            <strong>Tip:</strong> Always convert if you plan to do math. Text and
+            numbers are different types.
+          </p>
+        </div>
+        <div class="concept">
+          <h3>Printing multiple values</h3>
+          <p>
+            <code>print()</code> can show more than one value. Python adds spaces
+            between them automatically.
+          </p>
+          <pre><code>name = "Alex"
+age = 20
+print("Name:", name, "Age:", age)</code></pre>
+        </div>
+        <div class="practice">
+          <h3>Practice Tasks</h3>
+          <ul>
+            <li>Ask the user for their name and print a greeting.</li>
+            <li>Ask the user for a price and convert it to a float.</li>
+            <li>Print the price with a message like "The price is ...".</li>
+          </ul>
+          <p>
+            <strong>Expected Output:</strong> The greeting and the price message
+            printed to the screen.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>4. Conditional Statements</h2>
+        <div class="concept">
+          <h3>Why programs make decisions</h3>
+          <p>
+            Programs often choose different actions based on information. This
+            is like deciding to bring an umbrella only if it is raining.
+          </p>
+        </div>
+        <div class="concept">
+          <h3>if, elif, else</h3>
+          <p>
+            Use <code>if</code> to check a condition, <code>elif</code> to check
+            another, and <code>else</code> for the final fallback.
+          </p>
+          <pre><code>temperature = 30
+if temperature > 30:
+    print("Hot")
+elif temperature >= 20:
+    print("Warm")
+else:
+    print("Cool")</code></pre>
+          <p>
+            Only one branch runs. Python stops after it finds the first true
+            condition.
+          </p>
+        </div>
+        <div class="concept">
+          <h3>Indentation matters</h3>
+          <p>
+            Python uses indentation (spaces) to group lines. The indented lines
+            belong to the condition above them.
+          </p>
+          <pre><code>if True:
+    print("This line is inside the if")
+print("This line is outside")</code></pre>
+        </div>
+        <div class="concept">
+          <h3>Comparison operators</h3>
+          <ul>
+            <li><code>==</code> equal to</li>
+            <li><code>!=</code> not equal to</li>
+            <li><code>&gt;</code> greater than</li>
+            <li><code>&lt;</code> less than</li>
+            <li><code>&gt;=</code> greater than or equal to</li>
+            <li><code>&lt;=</code> less than or equal to</li>
+          </ul>
+        </div>
+        <div class="concept">
+          <h3>Logical operators</h3>
+          <ul>
+            <li><code>and</code>: both conditions must be true</li>
+            <li><code>or</code>: at least one condition is true</li>
+            <li><code>not</code>: flips true to false (and false to true)</li>
+          </ul>
+          <pre><code>age = 22
+has_id = True
+if age >= 18 and has_id:
+    print("Entry allowed")</code></pre>
+          <pre><code>is_raining = False
+if not is_raining:
+    print("No umbrella needed")</code></pre>
+        </div>
+        <div class="concept">
+          <h3>Example</h3>
+          <pre><code>if age &gt;= 18:
+    print("You are an adult")
+else:
+    print("You are a minor")</code></pre>
+          <pre><code>number = int(input("Enter a number: "))
+if number % 2 == 0:
+    print("Even")
+else:
+    print("Odd")</code></pre>
+        </div>
+        <div class="practice">
+          <h3>Practice Tasks</h3>
+          <ul>
+            <li>Ask the user for a number.</li>
+            <li>
+              Print whether the number is positive, negative, or zero.
+            </li>
+            <li>
+              Ask the user for their score and print "Pass" if it is 60 or
+              higher, otherwise print "Try again".
+            </li>
+          </ul>
+          <p>
+            <strong>Expected Output:</strong> Messages that match the conditions
+            you tested.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>5. Loops</h2>
+        <div class="concept">
+          <h3>Why repetition is needed</h3>
+          <p>
+            Loops let you repeat actions without writing the same code over and
+            over. This saves time and reduces mistakes.
+          </p>
+        </div>
+        <div class="concept">
+          <h3>for loop</h3>
+          <p>
+            A <code>for</code> loop repeats a set number of times. It often uses
+            <code>range()</code> to create a sequence of numbers.
+          </p>
+          <pre><code>for i in range(5):
+    print(i)</code></pre>
+          <pre><code>for i in range(1, 4):
+    print("Round", i)</code></pre>
+          <pre><code>names = ["Alex", "Mia", "Sam"]
+for name in names:
+    print("Hello", name)</code></pre>
+          <p>
+            <code>range(start, stop, step)</code> lets you control the numbers.
+          </p>
+          <pre><code>for i in range(2, 11, 2):
+    print(i)</code></pre>
+        </div>
+        <div class="concept">
+          <h3>while loop</h3>
+          <p>
+            A <code>while</code> loop repeats while a condition stays true.
+          </p>
+          <pre><code>count = 1
+while count &lt;= 3:
+    print(count)
+    count += 1</code></pre>
+          <pre><code>password = ""
+while password != "python":
+    password = input("Enter the password: ")
+print("Correct!")</code></pre>
+          <pre><code>total = 0
+number = 1
+while number <= 5:
+    total = total + number
+    number += 1
+print(total)</code></pre>
+        </div>
+        <div class="practice">
+          <h3>Practice Tasks</h3>
+          <ul>
+            <li>Use a <code>for</code> loop to print numbers 1 to 5.</li>
+            <li>Use a <code>while</code> loop to print "Hello" three times.</li>
+            <li>Ask the user for a number and print that many stars (*).</li>
+          </ul>
+          <p>
+            <strong>Expected Output:</strong> Repeated numbers, words, or symbols
+            based on your loop.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>6. Data Sequences</h2>
+        <div class="concept">
+          <h3>Lists</h3>
+          <p>
+            A list is a collection of items kept in order. It is like a shopping
+            list: you can add, remove, and check items by position.
+          </p>
+          <div class="note">
+            <p>
+              <strong>Indexing:</strong> List positions start at 0, not 1. The
+              first item is at index 0.
+            </p>
+          </div>
+          <pre><code>colors = ["red", "green", "blue"]
+print(colors[0])</code></pre>
+          <pre><code>colors.append("yellow")
+print(colors)
+colors.remove("green")
+print(len(colors))</code></pre>
+          <pre><code>colors.insert(1, "purple")
+last_color = colors.pop()
+print(colors)
+print(last_color)</code></pre>
+          <pre><code>print("red" in colors)</code></pre>
+          <p>Common list tools:</p>
+          <ul>
+            <li><code>append()</code>: add an item to the end</li>
+            <li><code>remove()</code>: remove a specific item</li>
+            <li><code>insert()</code>: add an item at a position</li>
+            <li><code>pop()</code>: remove and return an item (default is last)</li>
+            <li><code>len()</code>: get how many items are in the list</li>
+            <li><code>in</code>: check if an item exists</li>
+          </ul>
+          <div class="note">
+            <p>
+              Lists keep order, so indexing and looping through them is very
+              common in beginner programs.
+            </p>
+          </div>
+        </div>
+
+        <div class="concept">
+          <h3>Tuples</h3>
+          <p>
+            A tuple is like a list, but it cannot be changed after it is
+            created. Use tuples when the values should stay the same.
+          </p>
+          <pre><code>point = (3, 5)
+print(point[0])</code></pre>
+          <pre><code>days_in_week = (7, "days")
+print(days_in_week)</code></pre>
+          <pre><code>scores = (10, 20, 10)
+print(scores.count(10))
+print(scores.index(20))</code></pre>
+          <p>
+            Tuples are useful for fixed data, like coordinates or days in a week.
+          </p>
+        </div>
+
+        <div class="concept">
+          <h3>Sets</h3>
+          <p>
+            A set is a collection of unique values. It automatically removes
+            duplicates.
+          </p>
+          <pre><code>fruits = {"apple", "banana", "apple"}
+print(fruits)</code></pre>
+          <pre><code>fruits.add("orange")
+print("banana" in fruits)</code></pre>
+          <pre><code>fruits.discard("banana")
+more_fruits = {"pear", "orange"}
+fruits.update(more_fruits)
+print(fruits)</code></pre>
+          <p>
+            Sets do not keep order and do not use indexes.
+          </p>
+          <ul>
+            <li><code>add()</code>: add one item</li>
+            <li><code>remove()</code> / <code>discard()</code>: remove an item</li>
+            <li><code>update()</code>: add many items from another set</li>
+            <li><code>in</code>: check if an item exists</li>
+          </ul>
+        </div>
+
+        <div class="concept">
+          <h3>Dictionaries</h3>
+          <p>
+            A dictionary stores data in key-value pairs. You use a key to find
+            its value, like looking up a word in a dictionary.
+          </p>
+          <pre><code>student = {
+    "name": "Alex",
+    "age": 20
+}
+print(student["name"])</code></pre>
+          <pre><code>student["grade"] = "A"
+print(student)
+print(len(student))</code></pre>
+          <pre><code>print(student.get("name"))
+print(student.get("city", "Unknown"))</code></pre>
+          <pre><code>for key in student.keys():
+    print(key)</code></pre>
+          <pre><code>for value in student.values():
+    print(value)</code></pre>
+          <pre><code>for key, value in student.items():
+    print(key, ":", value)</code></pre>
+          <ul>
+            <li><code>keys()</code>: get all keys</li>
+            <li><code>values()</code>: get all values</li>
+            <li><code>items()</code>: get key-value pairs</li>
+            <li><code>get()</code>: safely get a value</li>
+            <li><code>in</code>: check if a key exists</li>
+          </ul>
+        </div>
+
+        <div class="practice">
+          <h3>Practice Tasks</h3>
+          <ul>
+            <li>Create a list of three favorite foods and print the first one.</li>
+            <li>Create a tuple with your birth year and birth month.</li>
+            <li>Create a set of three colors, including one duplicate.</li>
+            <li>Create a dictionary with your name and age, then print the name.</li>
+          </ul>
+          <p>
+            <strong>Expected Output:</strong> Values from your list, tuple, set,
+            and dictionary shown on the screen.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Keep practicing. Every small step builds your coding confidence.</p>
+    </footer>
+  </body>
+</html>
+
